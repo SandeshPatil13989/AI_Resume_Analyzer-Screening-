@@ -2,6 +2,10 @@
 # AI Resume Analyzer 📝
 The AI Resume Analyzer is an intelligent web-based tool designed to help job seekers evaluate and enhance their resumes by comparing them directly against a specific job description. Leveraging advanced AI models, this tool simulates how Applicant Tracking Systems (ATS) and recruiters assess your resume for relevance, alignment, and suitability for a role. Completely in a single Python file.
 
+The application uses Natural Language Processing (NLP) models from Hugging Face Transformers and Sentence-Transformers to extract meaningful information from the resume and calculate similarity between the resume content and the job description. Based on this analysis, the system generates an ATS-style score and provides suggestions to improve the resume.
+
+This project helps job seekers optimize their resumes so that they are more likely to pass Applicant Tracking Systems (ATS) used by many companies during recruitment.
+
 Watch our [Youtube Tutorial](https://youtu.be/XfoHr9GivCs) for a Demo and detailed explanation of installation steps and code.
 
 ## 🔍 What Does This Project Do?
@@ -23,8 +27,13 @@ The AI not only scores your resume but also provides personalized suggestions on
 ### 6. Downloadable Report
 Users can easily download the detailed analysis for reference, making it convenient to track and implement the suggested changes.
 
-
----
+Technologies Used
+Python
+Streamlit
+Hugging Face Transformers
+Sentence-Transformers
+PyTorch
+Scikit-learn
 
 ### 🎯 **Why Use This Tool?**
 
@@ -35,72 +44,3 @@ Users can easily download the detailed analysis for reference, making it conveni
 
 This project is perfect for job seekers who want to make sure their resumes are tailored to specific roles, career coaches looking for efficient feedback tools, or developers seeking to explore AI’s capabilities in HR-tech workflows.
 
-
-# ⚙️ Installation Steps
-
-Follow these steps to set up and run the **AI Resume Analyzer** locally:
-
-
-Make sure you have Python and Git installed.
-
-### 1️⃣ **Clone the Repository**
-
-```bash
-git clone https://github.com/Altoks-AI/AI-Resume-Analyzer.git
-```
-```
-cd FolderName
-```
-
-### 2️⃣ Set Up a Virtual Environment
-```
-python -m venv myenv
-```
-```
-./myenv/Scripts/activate
-```
-
-### 3️⃣ Install Dependencies
-Make sure you have pip updated, then install all required packages:
-```
-pip install -r requirements.txt
-```
-
-### 4️⃣ Set Up Your .env File
-Create a .env file in the root directory and add your Groq API key from [Groq](https://groq.com/) 
-
-```
-GROQ_API_KEY=your_groq_api_key_here
-```
-
-### 5️⃣ Run the Streamlit App
-Launch the app locally using Streamlit:
-```
-streamlit run main.py
-```
-### 6️⃣ Open in Browser
-Once the app starts, it will automatically open in your default web browser at:
-```
-http://localhost:8501
-```
----
-✅ Now you’re all set!
-Upload a resume, paste a job description, and let the AI analyze your resume for job-fit and provide suggestions. 
-
-## Possible Changes you may want to make:
-
-- Change the prompt in main.py file to get the results in the way you want.
-- Embedding Model is "sentence-transformers/all-mpnet-base-v2" ,Change to the model you desire (Ex: BERT, SBERT,etc)
-- Currently using Groq API and LLM model is "llama-3.3-70b-versatile", Change is model is removed or use other API's like OpenAI-GPT-4o model.
-- Change the Title, Labels and other names and display formats according to your liking.
-
-
-## Contact us :
-
-- Join our [Discord Community](https://discord.com/invite/qbhACtUB)
-- Our Company Website: [Altoks AI]( https://altoks.vercel.app/)
-
-🔗 Follow us everywhere:
-- [Linkedin](https://www.linkedin.com/in/altoks-ai/)
-- [Instagram](https://www.instagram.com/altoks_ai/)
-- [X (Twitter)](https://x.com/Altoks_AI)
